@@ -9,6 +9,21 @@
 //     }
 //     });
 
+const backToTopButton = document.getElementById("backToTop");
+
+    window.onscroll = function() {
+      // Show button after 200px of scrolling
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "flex";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.querySelector(".menu-btn");
   const nav = document.querySelector(".main-nav");
