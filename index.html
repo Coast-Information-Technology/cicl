@@ -19,6 +19,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- FAVICON -->
     <link
       rel="android-chrome-icon"
@@ -51,10 +53,10 @@
       <nav class="main-nav">
         <ul>
           <li class="nav-item">
-            <a href="index.html" class="active-navlink">Home</a>
+            <a href="/index.html" class="active-navlink">Home</a>
           </li>
           <li class="nav-item services" id="service">
-            <a href="service.html" class="nav-link"
+            <a href="/service.html" class="nav-link"
               >Services
               <span class="caret"><i class="fa-solid fa-chevron-down"></i></span
             ></a>
@@ -344,21 +346,21 @@
     </header>
 
     <main class="hero container">
-      <h1>
+      <h1 data-aos="fade-up" data-aos="fade-down">
         Transform teams. <br />
         Deliver measurable results.
       </h1>
-      <p>
+      <p data-aos="fade-up" data-aos="fade-down">
         We help organizations across Africa build capable leaders and efficient
         operations. Our outcome-driven consulting turns strategy into tangible
         performance improvements.
       </p>
-      <div class="hero-links">
+      <div data-aos="fade-up" data-aos="fade-down" class="hero-links">
         <a href="booking.html" class="btn-solid">Book Strategy Call</a>
         <a href="contact.html" class="btn-ghost">Request Proposal</a>
       </div>
 
-      <div class="collage">
+      <div data-aos="fade-up" data-aos="fade-down" class="collage">
         <!-- Left single image -->
         <div class="image-single">
           <img src="/images/home/hero-left-1.png" alt="Image 1" />
@@ -389,9 +391,11 @@
     </main>
 
     <section class="container innovation">
-      <h4>Innovation</h4>
-      <h2>Cutting-edge solutions for modern business challenges</h2>
-      <div class="image-container">
+      <h4 data-aos="fade-up" data-aos="fade-down">Innovation</h4>
+      <h2 data-aos="fade-up" data-aos="fade-down">
+        Cutting-edge solutions for modern business challenges
+      </h2>
+      <div data-aos="fade-up" data-aos="fade-down" class="image-container">
         <img
           src="/images/home/innovation.png"
           alt="innovation for modern business"
@@ -401,14 +405,14 @@
 
     <section class="organization-approach">
       <div class="container">
-        <h4>Our Approach</h4>
-        <h2>Three pillars of organizational transformation</h2>
-        <p>
+        <h4 data-aos="fade-up" data-aos="fade-down">Our Approach</h4>
+        <h2 data-aos="fade-up" data-aos="fade-down">Three pillars of organizational transformation</h2>
+        <p data-aos="fade-up" data-aos="fade-down">
           We combine hands-on consulting with practical training to drive key
           business metrics and sustainable change.
         </p>
 
-        <div class="grid">
+        <div data-aos="fade-up" data-aos="fade-down" class="grid">
           <div>
             <div class="organization-approach-images">
               <img
@@ -449,16 +453,16 @@
           </div>
         </div>
 
-        <a href="" class="btn-solid">Explore Services</a>
+        <a data-aos="fade-up" data-aos="fade-down" href="" class="btn-solid">Explore Services</a>
       </div>
     </section>
 
     <section class="container visualization">
-      <h4>Programs</h4>
-      <h2>Advanced data <br />visualization techniques</h2>
-      <p class="first-p-tag">Advanced data skills for modern professionals</p>
+      <h4 data-aos="fade-up" data-aos="fade-down">Programs</h4>
+      <h2 data-aos="fade-up" data-aos="fade-down">Advanced data <br />visualization techniques</h2>
+      <p data-aos="fade-up" data-aos="fade-down" class="first-p-tag">Advanced data skills for modern professionals</p>
 
-      <div class="carousel-container">
+      <div data-aos="fade-up" data-aos="fade-down" class="carousel-container">
         <div class="carousel-track-container">
           <div class="carousel-track">
             <div class="card">
@@ -703,15 +707,15 @@
 
     <section class="impact">
       <div class="container">
-        <h4>Impact</h4>
-        <h2>Case study spotlight</h2>
-        <p>
+        <h4 data-aos="fade-up" data-aos="fade-down">Impact</h4>
+        <h2 data-aos="fade-up" data-aos="fade-down">Case study spotlight</h2>
+        <p data-aos="fade-up" data-aos="fade-down">
           Real-world examples of organizational transformation and performance
           improvement.
         </p>
 
         <div class="results-block-container">
-          <div class="text-content-column">
+          <div data-aos="fade-left" data-aos="fade-right" class="text-content-column">
             <div class="result-section">
               <h3>Performance breakthroughs</h3>
               <p>
@@ -741,7 +745,7 @@
             </div>
           </div>
 
-          <div class="graphic-column">
+          <div data-aos="fade-right" data-aos="fade-left" class="graphic-column">
             <img src="/images/home/result.png" alt="result chart" />
           </div>
         </div>
@@ -980,13 +984,13 @@
     </section>
 
     <section class="container innovation">
-      <h2>Ready to transform your team?</h2>
-      <p>
+      <h2 data-aos="fade-up" data-aos="fade-down">Ready to transform your team?</h2>
+      <p data-aos="fade-up" data-aos="fade-down">
         Start your journey towards high-performance leadership and
         organizational excellence.
       </p>
 
-      <div>
+      <div data-aos="fade-up" data-aos="fade-down">
         <a href="booking.html" class="btn-solid">Book Strategy Call</a>
         <a href="contact.html" class="btn-ghost">Request Proposal</a>
       </div>
@@ -1091,5 +1095,9 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
