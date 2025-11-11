@@ -272,6 +272,7 @@ header {
 .hero {
   text-align: center;
   padding-top: 4rem;
+  overflow-x: hidden;
 }
 .hero p {
   max-width: 70%;
@@ -280,6 +281,45 @@ header {
 }
 .hero .hero-links {
   padding-top: 2rem;
+}
+
+.collage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+  margin-inline: -100px;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage img {
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  width: 220px;
+  height: 240px;
+}
+
+/* Center image larger */
+.center {
+  width: 350px;
+  height: 500px;
+}
+.center img {
+  width: 100%;
+  height: 100%;
 }
 
 /*=======================================================================
@@ -1077,10 +1117,6 @@ header {
   position: relative;
 }
 
-/* .horizontal-column.column-down {
-    transform: translateX(10%); /
-} */
-
 .home-card-track {
   display: flex;
   flex-direction: row;
@@ -1358,6 +1394,10 @@ header {
   }
 
   .actions .btn:not(.menu-btn) {
+    display: none;
+  }
+  
+  .collage {
     display: none;
   }
 
