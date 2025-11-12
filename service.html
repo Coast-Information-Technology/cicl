@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CICL — Services</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./script.js" />
     <meta name="description" content="CICL services mega menu demo" />
     <link
       rel="stylesheet"
@@ -47,28 +46,31 @@
   </head>
   <body>
     <!-- Scroll-to-top button -->
-    <button id="backToTop" title="Go to top">↑</button>
+    <button type="button" id="backToTop" title="Go to top">↑</button>
 
     <header>
       <img src="/images/CICL.jpg" alt="CICL brand logo" class="logo" />
       <nav class="main-nav">
-        <ul>
-          <li class="nav-item">
-            <a href="/index.html">Home</a>
+        <ul role="list">
+          <li role="listitem" class="nav-item">
+            <a href="/index.html" class="active-navlink">Home</a>
           </li>
-          <li class="nav-item services" id="service">
-            <a href="/service.html" class="nav-link active-navlink
-              ">Services
+          <li role="listitem" class="nav-item services" id="service">
+            <a href="/service.html" class="nav-link"
+              >Our Services
               <span class="caret"><i class="fa-solid fa-chevron-down"></i></span
             ></a>
             <!-- Mega menu -->
             <div class="mega-menu" aria-hidden="">
               <div class="mega-container">
-                <div class="mega-col">
-                  <h4>Talent Management &amp; HR Solutions</h4>
-                  <ul class="accordion-content">
-                    <li>
-                      <span class="square"></span>
+                <ul role="list" class="mega-col">
+                  <li role="listitem" class="mega-col-list">Talent Management &amp; HR Solutions</li>
+                  <ul role="list" class="accordion-content">
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-user-check icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Recruitment &amp; Selection</strong>
@@ -80,21 +82,27 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-chalkboard-user icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Training &amp; Development</strong>
                           <div class="item-sub">
                             Tailored corporate programs that boost employee
-                            skills,<br />
+                            skills,
                             productivity, and leadership capacity
                           </div></a
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-briefcase icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Talent &amp; Payroll Outsourcing</strong>
@@ -105,8 +113,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-shield-halved icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Background Checks &amp; Verification</strong>
@@ -117,11 +128,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i class="fa-solid fa-book icon" aria-hidden="true"></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>HR Policies & Employee Handbook</strong>
+                          ><strong>HR Policies &amp; Employee Handbook</strong>
                           <div class="item-sub">
                             Clear, transparent policies that align people with
                             business goals.
@@ -129,8 +140,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-id-card icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Career Services</strong>
@@ -142,13 +156,16 @@
                       </div>
                     </li>
                   </ul>
-                </div>
+                </ul>
 
-                <div class="mega-col">
-                  <h4>Business Development &amp; Strategy</h4>
+                <ul role="list" class="mega-col">
+                  <li role="listitem" class="mega-col-list">Business Development &amp; Strategy</li>
                   <ul class="accordion-content">
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-chart-line icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong
@@ -161,8 +178,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-sitemap icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong
@@ -174,8 +194,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-bullseye icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Corporate Strategy &amp; Execution</strong>
@@ -186,8 +209,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-palette icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Corporate Branding</strong>
@@ -197,8 +223,8 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i class="fa-solid fa-gears icon" aria-hidden="true"></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Business Process Optimization</strong>
@@ -208,22 +234,25 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i class="fa-solid fa-coins icon" aria-hidden="true"></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>Financial Modeling & Valuation</strong>
+                          ><strong>Financial Modeling &amp; Valuation</strong>
                           <div class="item-sub">
                             Gain clarity on investments and performance.
                           </div></a
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-clipboard-check icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>Auditing & Reconciliation</strong>
+                          ><strong>Auditing &amp; Reconciliation</strong>
                           <div class="item-sub">
                             Ensure compliance, accuracy, and accountability.
                           </div></a
@@ -231,13 +260,16 @@
                       </div>
                     </li>
                   </ul>
-                </div>
+                </ul>
 
-                <div class="mega-col">
-                  <h4>Professional Training Programmes</h4>
+                <ul role="list" class="mega-col">
+                  <li role="listitem" class="mega-col-list">Professional Training Programmes</li>
                   <ul class="accordion-content">
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-user-tie icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Leadership &amp; Management</strong>
@@ -248,8 +280,8 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i class="fa-solid fa-users icon" aria-hidden="true"></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>HR &amp; People Management</strong>
@@ -259,11 +291,14 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-calculator icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>Finance & Accounting</strong>
+                          ><strong>Finance &amp; Accounting</strong>
                           <div class="item-sub">
                             Strengthen financial literacy across your
                             organization.
@@ -271,8 +306,11 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-microchip icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Technology &amp; Data</strong>
@@ -284,8 +322,8 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i class="fa-solid fa-truck icon" aria-hidden="true"></i>
                       <div class="item-text">
                         <a href="#"
                           ><strong>Operations &amp; Supply Chain</strong>
@@ -296,11 +334,16 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-helmet-safety icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>Health, Safety & Environment (HSE)</strong>
+                          ><strong
+                            >Health, Safety &amp; Environment (HSE)</strong
+                          >
                           <div class="item-sub">
                             Internationally recognized training for workplace
                             safety.
@@ -308,11 +351,14 @@
                         >
                       </div>
                     </li>
-                    <li>
-                      <span class="square"></span>
+                    <li role="listitem">
+                      <i
+                        class="fa-solid fa-bullhorn icon"
+                        aria-hidden="true"
+                      ></i>
                       <div class="item-text">
                         <a href="#"
-                          ><strong>Sales & Marketing</strong>
+                          ><strong>Sales &amp; Marketing</strong>
                           <div class="item-sub">
                             Cutting-edge strategies for digital growth and
                             client acquisition.
@@ -321,16 +367,16 @@
                       </div>
                     </li>
                   </ul>
-                </div>
+                </ul>
               </div>
               <p class="mega-footer">
                 Unlock your career potential, <a href="#">Connect with us</a>
               </p>
             </div>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
-          <li class="nav-item">
+          <li role="listitem" class="nav-item"><a href="#" class="nav-link">About us</a></li>
+          <li role="listitem" class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
+          <li role="listitem" class="nav-item">
             <a href="#" class="nav-link"
               >Resources<span class="caret"
                 ><i class="fa-solid fa-chevron-down"></i></span
@@ -340,9 +386,16 @@
       </nav>
 
       <div class="actions">
-        <a href="#" class="btn-ghost">Explore</a>
-        <a href="contact.html" class="btn-solid">Contact</a>
-        <button class="btn menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <a href="#" class="btn-solid">Free Booking</a>
+        <a href="contact.html" class="btn-ghost request-proposal">Request Proposal</a>
+        <button
+          type="button"
+          aria-label="menu-btn"
+          id="menu-btn"
+          class="btn menu-btn"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
 
