@@ -1418,6 +1418,22 @@ header {
   margin: 0 0 20px 0;
 }
 
+.footer-tagline {
+  margin-block-start: 1rem;
+  max-width: 70%;
+  color: var(--general-white);
+}
+.footer-tagline strong {
+  color: var(--primary-color);
+}
+.footer-column p {
+  color: var(--general-white);
+  margin-block-start: .5rem;
+}
+.footer-column span {
+  color: var(--primary-color);
+}
+
 .contact-btn:hover {
   background-color: var(--primary-accent-color);
 }
