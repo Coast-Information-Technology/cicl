@@ -1665,6 +1665,12 @@ header {
 }
 
 @media (max-width: 600px) {
+  .hero p {
+  max-width: 90%;
+  margin: auto;
+  margin-block: 1rem;
+}
+
   .organization-approach .grid {
     grid-template-columns: 1fr;
   }
