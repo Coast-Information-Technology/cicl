@@ -23,7 +23,6 @@ body {
   background: var(--general-white);
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  line-height: 1.5;
 }
 
 /* ======================================================================
@@ -85,6 +84,7 @@ h4 {
 
 p {
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .actions {
@@ -321,6 +321,7 @@ header {
   gap: 20px;
   min-height: 100vh;
   margin-inline: -100px;
+  margin-block-start: 1.5rem;
 }
 
 .image-column {
