@@ -1479,7 +1479,7 @@ header {
     transition: transform 0.3s ease-in-out;
     z-index: 999;
     overflow-y: auto;
-    padding: 1rem 1.25rem;
+    padding: 1rem;
   }
 
   .mobile-nav.active {
