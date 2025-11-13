@@ -52,6 +52,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ESC to close
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobile(); });
+
+    // Accordion toggle functionality
+    const accordionToggle = document.getElementById('m-services-toggle');
+    const accordionItem = document.getElementById('m-services-item');
+    const accordionPanel = document.getElementById('m-services-panel');
+
+    if (accordionToggle && accordionItem && accordionPanel) {
+      accordionToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = accordionItem.classList.contains('open');
+        
+        if (isOpen) {
+          accordionItem.classList.remove('open');
+          accordionToggle.classList.remove('is-open');
+          accordionToggle.setAttribute('aria-expanded', 'false');
+          accordionPanel.setAttribute('aria-hidden', 'true');
+        } else {
+          accordionItem.classList.add('open');
+          accordionToggle.classList.add('is-open');
+          accordionToggle.setAttribute('aria-expanded', 'true');
+          accordionPanel.setAttribute('aria-hidden', 'false');
+        }
+      });
+    }
+
+    // Section toggle functionality
+    const sectionToggles = document.querySelectorAll('.section-toggle');
+    sectionToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const sectionListId = toggle.getAttribute('aria-controls');
+        const sectionList = document.getElementById(sectionListId);
+        const isOpen = toggle.classList.contains('is-open');
+        
+        if (isOpen) {
+          toggle.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          if (sectionList) {
+            sectionList.classList.remove('open');
+            sectionList.setAttribute('aria-hidden', 'true');
+          }
+        } else {
+          toggle.classList.add('is-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          if (sectionList) {
+            sectionList.classList.add('open');
+            sectionList.setAttribute('aria-hidden', 'false');
+          }
+        }
+      });
+    });
   })();
 });
 

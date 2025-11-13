@@ -1507,11 +1507,6 @@ header {
     font-weight: 600;
   }
 
-  /* Accordion */
-  .accordion-item {
-    border-bottom: 1px solid #eee;
-  }
-
   .accordion-toggle {
     display: flex;
     justify-content: space-between;
@@ -1543,7 +1538,8 @@ header {
   .section-toggle {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    gap: 1.2rem;
     width: 100%;
     background: none;
     border: 0;
@@ -1603,7 +1599,7 @@ header {
 
   .accordion-section li a:hover {
     background: rgba(0, 80, 200, 0.08);
-    color: #0050c8;
+    color: var(--primary-color);
   }
 
   .btn-solid {
@@ -1778,7 +1774,7 @@ header {
     font-size: 0.8rem;
   }
 
-  .request-proposal {
+  .free-booking {
     display: none;
   }
 
