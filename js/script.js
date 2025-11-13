@@ -14,45 +14,45 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Mobile menu toggle
-  const menuBtn = document.querySelector(".menu-btn");
-  const mobileNav = document.getElementById("mobile-nav");
-  const closeBtn = document.getElementById("close-btn");
+  (function () {
+    const body = document.body;
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const closeBtn = document.getElementById('close-btn'); // inside panel (kept)
 
-  menuBtn.addEventListener("click", () => {
-    mobileNav.classList.add("active");
-    document.body.classList.add("no-scroll");
-  });
+    function openMobile() {
+      mobileNav.classList.add('active');
+      body.classList.add('no-scroll');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      menuBtn.setAttribute('aria-label', 'Close menu');
+      menuBtn.classList.add('is-open');
+    }
 
-  closeBtn.addEventListener("click", () => {
-    mobileNav.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  });
+    function closeMobile() {
+      mobileNav.classList.remove('active');
+      body.classList.remove('no-scroll');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open menu');
+      menuBtn.classList.remove('is-open');
+    }
 
-  // Accordion inside mobile nav
-  const accordions = document.querySelectorAll(".accordion-toggle");
-
-  accordions.forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const parent = this.closest(".accordion-item");
-      const content = parent.querySelector(".accordion-content");
-
-      // Close others
-      document.querySelectorAll(".accordion-item").forEach((item) => {
-        if (item !== parent) {
-          item.classList.remove("open");
-          item.querySelector(".accordion-content").style.maxHeight = null;
-        }
-      });
-
-      // Toggle current
-      parent.classList.toggle("open");
-      if (parent.classList.contains("open")) {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } else {
-        content.style.maxHeight = null;
-      }
+    // Toggle via the same button (morphs bars ↔ times)
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.contains('active');
+      isOpen ? closeMobile() : openMobile();
     });
-  });
+
+    // Panel's internal close button still works
+    if (closeBtn) closeBtn.addEventListener('click', closeMobile);
+
+    // Close after selecting any link in the panel
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobile));
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobile(); });
+  })();
 });
+
+

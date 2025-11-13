@@ -400,78 +400,88 @@
         <a href="contact.html" class="btn-ghost request-proposal">Request Proposal</a>
         <button
           type="button"
-          aria-label="menu-btn"
           id="menu-btn"
           class="btn menu-btn"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
         >
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars icon-menu" aria-hidden="true"></i>
+          <i class="fa-solid fa-times icon-close" aria-hidden="true"></i>
         </button>
+
       </div>
 
       <!-- Mobile Navigation -->
-      <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
-        <button type="button" class="close-btn" id="close-btn" aria-label="Close menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+       <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true" tabindex="-1">
+          <ul class="mobile-links">
+            <li><a href="/index.html" class="active">Home</a></li>
 
-        <ul class="mobile-nav-list">
-          <li><a href="/index.html" class="active">Home</a></li>
+            <!-- Accordion: Services -->
+            <li class="accordion-item" id="m-services-item">
+              <button class="accordion-toggle" id="m-services-toggle" aria-expanded="false" aria-controls="m-services-panel">
+                <span>Services</span>
+                <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+              </button>
 
-          <!-- Accordion for Our Services -->
-          <li class="accordion-item">
-            <button class="accordion-toggle">
-              Our Services <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <ul class="accordion-content">
-              <li>
-                <strong>Talent Management & HR Solutions</strong>
-                <ul>
-                  <li><a href="#">Recruitment & Selection</a></li>
-                  <li><a href="#">Training & Development</a></li>
-                  <li><a href="#">Talent & Payroll Outsourcing</a></li>
-                  <li><a href="#">Background Checks & Verification</a></li>
-                  <li><a href="#">HR Policies & Employee Handbook</a></li>
-                  <li><a href="#">Career Services</a></li>
-                </ul>
-              </li>
-              <li>
-                <strong>Business Development & Strategy</strong>
-                <ul>
-                  <li><a href="#">Market Research & Business Analysis</a></li>
-                  <li><a href="#">Business Model & Structure Design</a></li>
-                  <li><a href="#">Corporate Strategy & Execution</a></li>
-                  <li><a href="#">Corporate Branding</a></li>
-                  <li><a href="#">Business Process Optimization</a></li>
-                  <li><a href="#">Financial Modeling & Valuation</a></li>
-                  <li><a href="#">Auditing & Reconciliation</a></li>
-                </ul>
-              </li>
-              <li>
-                <strong>Professional Training Programmes</strong>
-                <ul>
-                  <li><a href="#">Leadership & Management</a></li>
-                  <li><a href="#">HR & People Management</a></li>
-                  <li><a href="#">Finance & Accounting</a></li>
-                  <li><a href="#">Technology & Data</a></li>
-                  <li><a href="#">Operations & Supply Chain</a></li>
-                  <li><a href="#">Health, Safety & Environment (HSE)</a></li>
-                  <li><a href="#">Sales & Marketing</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+              <div class="accordion-content" id="m-services-panel" aria-hidden="true">
+                <!-- Section: Talent & HR -->
+                <div class="accordion-section">
+                  <button class="section-toggle" aria-expanded="false" aria-controls="m-hr-list">
+                    <span class="section-title">Talent Management &amp; HR Solutions</span>
+                    <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                  </button>
+                  <ul id="m-hr-list" class="section-list" aria-hidden="true">
+                    <li><a href="/services/talent-management-hr#recruitment">Recruitment &amp; Selection</a></li>
+                    <li><a href="/services/talent-management-hr#training">Training &amp; Development</a></li>
+                    <li><a href="/services/talent-management-hr#outsourcing">Talent &amp; Payroll Outsourcing</a></li>
+                    <li><a href="/services/talent-management-hr#verification">Background Checks &amp; Verification</a></li>
+                    <li><a href="/services/talent-management-hr#policies">HR Policies &amp; Employee Handbook</a></li>
+                    <li><a href="/services/talent-management-hr#career">Career Services</a></li>
+                  </ul>
+                </div>
 
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">Resources</a></li>
-        </ul>
+                <!-- Section: Business Strategy -->
+                <div class="accordion-section">
+                  <button class="section-toggle" aria-expanded="false" aria-controls="m-biz-list">
+                    <span class="section-title">Business Development &amp; Strategy</span>
+                    <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                  </button>
+                  <ul id="m-biz-list" class="section-list" aria-hidden="true">
+                    <li><a href="/services/business-strategy#research">Market Research &amp; Business Analysis</a></li>
+                    <li><a href="/services/business-strategy#models">Business Model &amp; Structure Design</a></li>
+                    <li><a href="/services/business-strategy#execution">Corporate Strategy &amp; Execution</a></li>
+                    <li><a href="/services/business-strategy#branding">Corporate Branding</a></li>
+                    <li><a href="/services/business-strategy#process">Business Process Optimization</a></li>
+                    <li><a href="/services/business-strategy#valuation">Financial Modeling &amp; Valuation</a></li>
+                    <li><a href="/services/business-strategy#audit">Auditing &amp; Reconciliation</a></li>
+                  </ul>
+                </div>
 
-        <div class="mobile-actions">
-          <a href="#" class="btn-solid">Free Booking</a>
-          <a href="contact.html" class="btn-ghost">Request Proposal</a>
-        </div>
-      </nav>
+                <!-- Section: Training -->
+                <div class="accordion-section">
+                  <button class="section-toggle" aria-expanded="false" aria-controls="m-train-list">
+                    <span class="section-title">Professional Training Programmes</span>
+                    <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                  </button>
+                  <ul id="m-train-list" class="section-list" aria-hidden="true">
+                    <li><a href="/services/training-programmes#leadership">Leadership &amp; Management</a></li>
+                    <li><a href="/services/training-programmes#hr">HR &amp; People Management</a></li>
+                    <li><a href="/services/training-programmes#finance">Finance &amp; Accounting</a></li>
+                    <li><a href="/services/training-programmes#tech">Technology &amp; Data</a></li>
+                    <li><a href="/services/training-programmes#ops">Operations &amp; Supply Chain</a></li>
+                    <li><a href="/services/training-programmes#hse">Health, Safety &amp; Environment (HSE)</a></li>
+                    <li><a href="/services/training-programmes#sales">Sales &amp; Marketing</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
 
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/contact.html">Contact us</a></li>
+            <li><a href="/resources">Resources</a></li>
+          </ul>
+        </nav>
     </header>
 
     <main class="hero container homepage-hero">
@@ -1445,7 +1455,7 @@
         organizational excellence.
       </p>
 
-      <div data-aos="fade-up" data-aos="fade-down">
+      <div data-aos="fade-up" data-aos="fade-down" class="hero-links">
         <a href="booking.html" class="btn-solid">Book Strategy Call</a>
         <a href="contact.html" class="btn-ghost">Request Proposal</a>
       </div>
@@ -1514,7 +1524,7 @@
         <hr class="footer-divider" />
 
         <div class="footer-bottom-bar">
-            <p role="listitem">
+            <p>
               <span>&copy; 2025</span> Conceptual Integrated Consulting Limited
             </p>
           <ul role="list" class="copyright">
