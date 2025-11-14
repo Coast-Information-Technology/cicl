@@ -462,6 +462,7 @@ header {
 
 .visualization {
   text-align: left;
+  padding-inline: 1rem;
 }
 
 .visualization .first-p-tag {
