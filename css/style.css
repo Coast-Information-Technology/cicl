@@ -1893,7 +1893,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 0.5rem;
+    /* padding: 1rem 0.5rem; */
     font-size: 1rem;
     background: none;
     border: none;
@@ -1962,6 +1962,7 @@ header {
     margin-bottom: 0.5rem;
     border-bottom: 1px solid #eee;
     padding-bottom: 0.25rem;
+    text-align: left;
   }
 
   .accordion-section ul {
