@@ -104,25 +104,6 @@
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
     <link rel="favicon" href="/images/favicon/favicon.ico" />
 
-    <!-- A11y & Reduced Motion (tiny inline, no layout change) -->
-    <style>
-      :focus-visible {
-        outline: 3px solid #0050c8;
-        outline-offset: 2px;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        [data-aos],
-        .mobile-nav,
-        .accordion-content {
-          transition: none !important;
-          animation: none !important;
-        }
-      }
-      img[loading="lazy"] {
-        content-visibility: auto;
-      }
-    </style>
-
     <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
       {
@@ -205,7 +186,7 @@
               <div class="mega-container">
                 <ul role="list" class="mega-col">
                   <li role="listitem" class="mega-col-list">
-                    Talent Management &amp; HR Solutions
+                    Talent Management &amp; HR Solutions <a href="talent-management-hr-solution"><i class="fa-solid fa-link"></i> Explore</a>
                   </li>
                   <ul role="list" class="accordion-content">
                     <li role="listitem">
@@ -301,7 +282,7 @@
 
                 <ul role="list" class="mega-col">
                   <li role="listitem" class="mega-col-list">
-                    Business Development &amp; Strategy
+                    Business Development &amp; Strategy <a href="talent-management-hr-solution"><i class="fa-solid fa-link"></i> Explore</a>
                   </li>
                   <ul class="accordion-content">
                     <li role="listitem">
@@ -407,7 +388,7 @@
 
                 <ul role="list" class="mega-col">
                   <li role="listitem" class="mega-col-list">
-                    Professional Training Programmes
+                    Professional Training Programmes <a href="talent-management-hr-solution"><i class="fa-solid fa-link"></i> Explore</a>
                   </li>
                   <ul class="accordion-content">
                     <li role="listitem">
@@ -520,17 +501,17 @@
             </div>
           </li>
           <li role="listitem" class="nav-item">
-            <a href="#" class="nav-link">About us</a>
+            <a href="about.html" class="nav-link">About us</a>
           </li>
           <li role="listitem" class="nav-item">
-            <a href="#" class="nav-link">Contact us</a>
+            <a href="contact.html" class="nav-link">Contact us</a>
           </li>
-          <li role="listitem" class="nav-item">
+          <!-- <li role="listitem" class="nav-item">
             <a href="#" class="nav-link"
               >Resources<span class="caret"
                 ><i class="fa-solid fa-chevron-down"></i></span
             ></a>
-          </li>
+          </li> -->
         </ul>
       </nav>
 
@@ -570,7 +551,6 @@
       >
         <ul class="mobile-links">
           <li><a href="/index.html" class="active">Home</a></li>
-
           <!-- Accordion: Services -->
           <li class="accordion-item" id="m-services-item">
             <button
@@ -579,7 +559,7 @@
               aria-expanded="false"
               aria-controls="m-services-panel"
             >
-              <span>Services</span>
+              <a href="service.html">Services</a>
               <i
                 class="fa-solid fa-chevron-down chevron"
                 aria-hidden="true"
@@ -749,7 +729,6 @@
               </div>
             </div>
           </li>
-
           <li><a href="/about.html">About us</a></li>
           <li><a href="/contact.html">Contact us</a></li>
           <li><a href="/resources">Resources</a></li>
