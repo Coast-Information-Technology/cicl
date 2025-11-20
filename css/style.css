@@ -166,7 +166,8 @@ p {
 .innovation h4,
 .organization-approach h4,
 .visualization h4,
-.impact h4, .industries-section h4 {
+.impact h4,
+.industries-section h4 {
   margin-block-end: 1.5rem;
 }
 
@@ -457,7 +458,7 @@ header {
 
 .organization-approach .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-block-start: 2.5rem;
   margin-block-end: 2rem;
@@ -1274,9 +1275,10 @@ header {
   gap: 15px;
 }
 
-.icon {
+.grid-items .icon {
   font-size: 28px;
-  color: #e76b2b; /* Accessible orange */
+  color: var(--primary-color);
+  margin-block-end: 1rem;
 }
 
 .item-title {
@@ -1328,9 +1330,9 @@ header {
   margin: auto;
 }
 
-.icon {
+.industry-item .icon {
   font-size: 32px;
-  color: #e76b2b;
+  color: var(--primary-color);
   margin-bottom: 15px;
 }
 
@@ -1463,7 +1465,225 @@ header {
   color: #e76b2b;
 }
 
+/* Utility */
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #667085;
+  margin: 0 0 0.25rem;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
+/* ------------------------------
+   Governance
+------------------------------ */
+.gov {
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+.gov__header {
+  max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.gov__lede {
+  color: #475467;
+  margin: 0.5rem auto 1.25rem;
+}
+.gov__list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .gov__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.gov__item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1rem;
+  background: #fff;
+}
+.gov__icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 999px;
+  background: #f2f4f7;
+  border: 1px solid #e6e6e6;
+  flex: 0 0 2.5rem;
+}
+.gov__icon svg {
+  fill: currentColor;
+  color: #0f766e;
+}
+.gov__title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.gov__copy {
+  margin: 0;
+  color: #475467;
+}
+.gov__policy {
+  text-align: center;
+  margin-top: 1rem;
+}
+.gov__policy-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  text-decoration: none;
+}
+.gov__policy-link:focus-visible {
+  outline: 3px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+/* ------------------------------
+   Partnerships — Infinite Logo Marquee
+   (pauses on hover/focus and for reduced motion)
+------------------------------ */
+.partners {
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+.partners__header {
+  max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.partners__lede {
+  color: #475467;
+  margin: 0.5rem auto 1.25rem;
+}
+
+.logo-marquee {
+  --gap: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  padding-block: 1rem;
+  /* soft edge mask for accessibility (no harsh popping) */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  border: 1px solid #eaecf0;
+  border-radius: 16px;
+  background: #fff;
+}
+.logo-track {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+.logo-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+}
+.logo-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  outline-offset: 3px;
+}
+.logo-item a:focus-visible {
+  outline: 3px solid #0ea5e9;
+}
+.logo-item img {
+  display: block;
+  max-height: 36px;
+  height: 36px;
+  width: auto;
+  filter: grayscale(100%) contrast(1.05);
+  opacity: 0.85;
+  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+.logo-item a:hover img,
+.logo-item a:focus img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Pause marquee on interaction */
+.logo-marquee:hover .logo-track,
+.logo-marquee:focus-within .logo-track {
+  animation-play-state: paused;
+}
+
+/* Reduced motion: disable animation and show a wrapping grid */
+@media (prefers-reduced-motion: reduce) {
+  .logo-track {
+    animation: none;
+    flex-wrap: wrap;
+  }
+  .logo-item {
+    min-width: unset;
+  }
+}
+
+/* Marquee keyframes */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* CTA under partners */
+.partners__cta {
+  text-align: center;
+  margin-top: 1rem;
+}
+.partners__cta .btn-ghost {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+}
+.partners__cta .btn-ghost:focus-visible {
+  outline: 3px solid #0ea5e9;
+  outline-offset: 2px;
+}
 
 /************************************************************************ 
 =========================================================================
@@ -2011,13 +2231,6 @@ header {
 }
 
 /* FAQS */
-
-.faqs-section {
-  background-color: #f7f7f7;
-  padding: 80px 20px;
-  font-family: "Roboto", sans-serif;
-}
-
 .faqs-header {
   max-width: 1200px;
   margin: 0 auto 50px;
@@ -2040,7 +2253,7 @@ header {
 /* --- FAQ GRID LAYOUT --- */
 .faqs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -2382,6 +2595,11 @@ header {
     height: 600px;
   }
 
+  .faqs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
   .footer-main-content {
     flex-wrap: wrap;
   }
@@ -2540,11 +2758,6 @@ header {
     display: none;
   }
 
-  .faqs-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
   .faqs-header h1 {
     font-size: 2.2em;
   }
@@ -2592,6 +2805,9 @@ header {
   .organization-approach .grid {
     grid-template-columns: 1fr;
   }
+  .organization-approach .grid h3, .organization-approach .grid p {
+    margin-block-end: 1rem;
+  }
   .slides-section {
     flex-direction: column;
     height: 400px;
@@ -2610,6 +2826,11 @@ header {
   }
   .carousel-container {
     grid-template-columns: 1fr;
+  }
+
+  .faqs-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .footer-main-content {
