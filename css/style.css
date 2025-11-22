@@ -1360,7 +1360,7 @@ header {
   flex: 1;
   max-width: 320px;
   position: sticky;
-  top: 40px;
+  top: 60px;
   height: fit-content;
 }
 
@@ -1417,7 +1417,14 @@ header {
   position: relative;
 }
 
-.profile-img::before {
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* .profile-img::before {
   content: "\f03e";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -1428,7 +1435,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .profile-info {
   max-width: 400px;
